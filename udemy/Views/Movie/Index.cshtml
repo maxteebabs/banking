@@ -1,0 +1,27 @@
+﻿@model udemy.ViewModels.RandomMovie
+
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Product.name</h2>
+<p>@ViewData["movie"]</p>
+
+<p>List of Customers</p>
+@{
+	var className = Model.Customers.Count > 0 ? "active" : null;
+}
+@if (Model.Customers.Count > 0)
+{
+<ul class="@className">
+	@foreach (var customer in Model.Customers)
+	{
+		<li>@customer.name</li>
+		<li>@customer.gender</li>
+	}
+</ul>
+}
+
+
