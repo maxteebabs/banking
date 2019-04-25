@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using udemy.Models;
 
-namespace udemy.Models
+namespace udemy.DTOs
 {
-    public class Customer
+    public class CustomerDto
     {
         public int ID { get; set; }
         [Required]
@@ -18,9 +19,8 @@ namespace udemy.Models
 
         public string Occupation { get; set; }
 
-        [Min18YearsIfHasAccount]
         public DateTime? Dob { get; set; }
-        
+
         public string Gender { get; set; }
 
         public string Address { get; set; }
@@ -29,13 +29,6 @@ namespace udemy.Models
 
         public DateTime? DateEntered { get; set; }
 
-        public DateTime? Deleted { get; set; }
-
-        public Account Account { get; set; }
-
-        public int? AccountID { get; set; }
-
-        public static readonly byte Male = 1;
-        public static readonly byte Female = 2;
+        public AccountDto Account { get; set; }
     }
 }

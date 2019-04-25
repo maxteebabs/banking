@@ -18,8 +18,8 @@ namespace udemy.Controllers
 
             var customers = new List<Customer>
             {
-                new Customer {name="Taiwo", gender="Male" },
-                new Customer {name="Jiro", gender="Female" }
+                new Customer {Firstname="Taiwo", Gender="Male" },
+                new Customer {Firstname="Jiro", Gender="Female" }
             };
             var viewModel = new RandomMovie()
             {
